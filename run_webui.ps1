@@ -1,0 +1,1 @@
+.\.venv\Scripts\python.exe .\pixel_art_webui.py

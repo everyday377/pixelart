@@ -79,7 +79,7 @@ with gr.Blocks() as demo:
         output_img = gr.Image(type="pil", label="ピクセルアート出力", interactive=False,height=300)
 
     pixel_size = gr.Slider(2, 64, value=16, step=1, label="Pixel Size")
-    color_count = gr.Slider(2, 64, value=16, step=1, label="Color Count")
+    color_count = gr.Slider(2, 64, value=64, step=1, label="Color Count")
     scale = gr.Number(value=1.0, label="倍率 (0より大きい実数)", precision=2)
     transparent = gr.Checkbox(value=False, label="背景透過PNGで保存")
 
@@ -92,4 +92,4 @@ with gr.Blocks() as demo:
               inputs=[input_img, pixel_size, color_count, scale, transparent, output_dir],
               outputs=[output_img, status])
 
-demo.launch()
+demo.launch(inbrowser=True)
